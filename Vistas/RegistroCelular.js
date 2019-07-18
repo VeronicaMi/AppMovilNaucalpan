@@ -30,6 +30,7 @@ export class RegistroCelular extends React.Component{
 
                     <TextInput
                         style = {styles.inputs}
+                        placeholder = '5528980930'
                         onChangeText = {(text) => this.setState({NumeroCelular: text})}
                         value = {this.state.NumeroCelular}
                     />
@@ -37,10 +38,8 @@ export class RegistroCelular extends React.Component{
                     <Button
                         style = {styles.buttonContainer}
                         onPress = {this._onPressButton}
-                        title = "Enviado"
+                        title = "Verificar"
                     />
-
-
             </View>
         )
     }
@@ -48,26 +47,31 @@ export class RegistroCelular extends React.Component{
 
 const styles = StyleSheet.create({
     container: {
-      flex: 1
-    },
-
-    heading:{
-        fontSize: 20,
         flex: 1
     },
 
+    heading:{
+        fontSize: 28,
+        justifyContent: 'center',
+        paddingTop: 80,
+        paddingLeft: 50,
+        margin: 50,
+    },
+
     labes:{
-        paddingBottom: 20
+        fontSize: 30,
+        paddingLeft: 40
     },
 
     inputs:{
-        flex: 1,
         width: '90%',
-        padding: 20
+        margin: 30
     },
 
     buttonContainer: {
-        flex: 1,
+        margin: 20,
+        paddingLeft:50,
+        flexDirection: 'row',
         alignItems: 'center',
         backgroundColor: '#2196F3'
     },

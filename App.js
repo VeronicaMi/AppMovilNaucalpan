@@ -1,11 +1,11 @@
 import React from 'react';
-import { Re } from './Vistas/Principal.js';
+import { RegistroCelular } from './Vistas/RegistroCelular';
 
 
 export default class App extends React.Component {
   render(){
     return(
-      <Principal />
+      <RegistroCelular />
     );
   }
 }
