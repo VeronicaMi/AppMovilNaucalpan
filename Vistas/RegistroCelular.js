@@ -58,12 +58,12 @@ const styles = StyleSheet.create({
         margin: 50,
     },
 
-    labes:{
-        fontSize: 30,
+    label:{
+        fontSize: 18,
         paddingLeft: 40
     },
 
-    inputs:{
+    input:{
         width: '90%',
         margin: 30
     },

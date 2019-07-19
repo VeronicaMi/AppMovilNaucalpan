@@ -27,14 +27,15 @@ export class RegistroUsuario extends React.Component{
             NoExterior: '',
             NoInterior: '',
             Colonia: '',
-            CodigoPostal: ''
+            CodigoPostal: '',
         };
     };
 
     state = { CompañiaCelular: '' }
-        updateCompañia = (CompañiaCelular) => {
-            this.setState({CompañiaCelular: CompañiaCelular})
-        }
+    updateCompañia = (CompañiaCelular) => {
+        this.setState({CompañiaCelular: CompañiaCelular})
+    }
+
 
     _onPressButton(){
         Alert.alert('Registrado correctamente')
@@ -53,7 +54,7 @@ export class RegistroUsuario extends React.Component{
                             onChangeText = {(text) => this.setState({NumeroCelular: text})}
                             value = {this.state.NumeroCelular}
                         />
-
+                    
                     <Picker selectedValue = {this.state.CompañiaCelular} onValueChange = {this.updateCompañia}>
                         <Picker.Item label = 'Telcel' value = 'telcel'/>
                         <Picker.Item label = 'Movistar' value = 'movistar'/>
@@ -65,44 +66,44 @@ export class RegistroUsuario extends React.Component{
                     <Text style = {styles.label}> Nombre(s)</Text>
                         <TextInput
                             style = {styles.input}
-                            placeholder = ''
+                            placeholder = 'F'
                             onChangeText = {(text) => this.setState({Nombre: text})}
                             value = {this.state.Nombre}
                         />
                     <Text style = {styles.label}> Apellido Paterno</Text>
                         <TextInput
                             style = {styles.input}
-                            placeholder = ''
+                            placeholder = 'F'
                             onChangeText = {(text) => this.setState({ApellidoPaterno: text})}
                             value = {this.state.ApellidoPaterno}
                         />
                     <Text style = {styles.label}> Apellido Materno</Text>
                         <TextInput
                             style = {styles.input}
-                            placeholder = ''
+                            placeholder = 'F'
                             onChangeText = {(text) => this.setState({ApellidoMaterno: text})}
                             value = {this.state.ApellidoMaterno}
                         />
                     <Text style = {styles.label}> Correo electronico</Text>
                         <TextInput
                             style = {styles.input}
-                            placeholder = ''
+                            placeholder = 'F'
                             onChangeText = {(text) => this.setState({Email: text})}
                             value = {this.state.Email}
                         />
-                                <Text style = {styles.label}> Confirma tu correo electronico</Text>
+                    <Text style = {styles.label}> Confirma tu correo electronico</Text>
                         <TextInput
                             style = {styles.input}
-                            placeholder = ''
+                            placeholder = 'F'
                             onChangeText = {(text) => this.setState({ConfirEmail: text})}
                             value = {this.state.ConfirEmail}
                         />
-                                <Text style = {styles.label}> Nombre(s)</Text>
+                    <Text style = {styles.label}> Calle(s)</Text>
                         <TextInput
                             style = {styles.input}
-                            placeholder = ''
-                            onChangeText = {(text) => this.setState({Nombre: text})}
-                            value = {this.state.Nombre}
+                            placeholder = 'F'
+                            onChangeText = {(text) => this.setState({Calle: text})}
+                            value = {this.state.Calle}
                         />
 
 
@@ -119,6 +120,38 @@ export class RegistroUsuario extends React.Component{
 
 const styles = StyleSheet.create({
     container:{
+        flex: 1
+    },
 
+    heading:{
+        fontSize: 28,
+        justifyContent: 'center',
+        paddingTop: 80,
+        paddingLeft: 50,
+        margin: 10,
+    },
+
+    titulo:{
+        fontSize: 28,
+        justifyContent: 'center',
+        paddingLeft: 30,
+        margin: 20,
+    },
+
+    label:{
+        fontSize: 18,
+        paddingLeft: 40
+    },
+
+    input:{
+        paddingLeft: 35
+    },
+
+    buttonContainer: {
+        margin: 20,
+        paddingLeft:50,
+        flexDirection: 'row',
+        alignItems: 'center',
+        backgroundColor: '#2196F3'
     },
 });
