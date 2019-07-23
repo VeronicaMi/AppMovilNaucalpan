@@ -9,6 +9,7 @@ import {
     Picker,
     AsyncStorage
 } from 'react-native';
+import DatePicker from 'react-native-datepicker';
 
 export class RegistroUsuario extends React.Component{
 
@@ -21,7 +22,7 @@ export class RegistroUsuario extends React.Component{
             ApellidoMaterno: '',
             Email: '',
             ConfirEmail: '',
-            FechaNacimiento: '',
+            FechaNacimiento: new Date().toDateString(),
             Sexo: '',
             Calle: '',
             NoExterior: '',
@@ -98,6 +99,32 @@ export class RegistroUsuario extends React.Component{
                             onChangeText = {(text) => this.setState({ConfirEmail: text})}
                             value = {this.state.ConfirEmail}
                         />
+
+                        <DatePicker
+                            style={{}}
+                            FechaNacimiento={this.state.FechaNacimiento} //initial date from state
+                            mode="date" //The enum of date, datetime and time
+                            placeholder="select date"
+                            format="DD-MM-YYYY"
+                            minDate="01-01-1900"
+                            maxDate="01-01-2019"
+                            confirmBtnText="Confirm"
+                            cancelBtnText="Cancel"
+                            customStyles={{
+                                dateIcon: {
+                                position: 'absolute',
+                                left: 0,
+                                top: 4,
+                                marginLeft: 0
+                                },
+                                dateInput: {
+                                marginLeft: 36
+                                }
+                            }}
+                            onDateChange={(FechaNacimiento) => {this.setState({FechaNacimiento: FechaNacimiento})}}
+                        />
+
+
                     <Text style = {styles.label}> Calle(s)</Text>
                         <TextInput
                             style = {styles.input}
@@ -153,5 +180,9 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
         alignItems: 'center',
         backgroundColor: '#2196F3'
+    },
+
+    calendario:{
+        width: 200
     },
 });
