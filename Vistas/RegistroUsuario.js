@@ -7,7 +7,8 @@ import {
     Button,
     Alert,
     Picker,
-    AsyncStorage
+    AsyncStorage,
+    ScrollView
 } from 'react-native';
 import DatePicker from 'react-native-datepicker';
 
@@ -22,7 +23,7 @@ export class RegistroUsuario extends React.Component{
             ApellidoMaterno: '',
             Email: '',
             ConfirEmail: '',
-            FechaNacimiento: new Date().toDateString(),
+            FechaNacimiento: new Date(),
             Sexo: '',
             Calle: '',
             NoExterior: '',
@@ -44,6 +45,7 @@ export class RegistroUsuario extends React.Component{
 
     render(){
         return (
+            <ScrollView>
             <View style = {styles.container}>
                 <Text style = {styles.heading}> Registro </Text>
                     
@@ -99,33 +101,39 @@ export class RegistroUsuario extends React.Component{
                             onChangeText = {(text) => this.setState({ConfirEmail: text})}
                             value = {this.state.ConfirEmail}
                         />
-
+                    
+                    <Text style = {styles.label}> Ingresa tu fecha de nacimiento</Text>
                         <DatePicker
-                            style={{}}
-                            FechaNacimiento={this.state.FechaNacimiento} //initial date from state
+                            style={styles.calendario}
+                            date={this.state.FechaNacimiento} //initial date from state
                             mode="date" //The enum of date, datetime and time
-                            placeholder="select date"
+                            placeholder="Selecciona tu fecha"
                             format="DD-MM-YYYY"
                             minDate="01-01-1900"
-                            maxDate="01-01-2019"
+                            maxDate="31-12-2021"
                             confirmBtnText="Confirm"
                             cancelBtnText="Cancel"
                             customStyles={{
-                                dateIcon: {
-                                position: 'absolute',
-                                left: 0,
-                                top: 4,
-                                marginLeft: 0
-                                },
-                                dateInput: {
-                                marginLeft: 36
-                                }
+                                //dateIcon: {
+                                //position: 'absolute',
+                                //left: 5,
+                                //top: 4,
+                                //marginLeft: 5
+                                //},
                             }}
-                            onDateChange={(FechaNacimiento) => {this.setState({FechaNacimiento: FechaNacimiento})}}
+                            onDateChange={(date) => {this.setState({FechaNacimiento: date})}}
                         />
 
 
                     <Text style = {styles.label}> Calle(s)</Text>
+                        <TextInput
+                            style = {styles.input}
+                            placeholder = 'F'
+                            onChangeText = {(text) => this.setState({Calle: text})}
+                            value = {this.state.Calle}
+                        />
+
+<Text style = {styles.label}> Calle33(s)</Text>
                         <TextInput
                             style = {styles.input}
                             placeholder = 'F'
@@ -140,6 +148,7 @@ export class RegistroUsuario extends React.Component{
 
 
             </View>
+            </ScrollView>
         )
     }
 
@@ -183,6 +192,7 @@ const styles = StyleSheet.create({
     },
 
     calendario:{
-        width: 200
+        width: 300,
+        marginLeft: 36
     },
 });
