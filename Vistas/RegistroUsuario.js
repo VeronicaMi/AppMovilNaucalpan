@@ -11,6 +11,13 @@ import {
     ScrollView
 } from 'react-native';
 import DatePicker from 'react-native-datepicker';
+import RadioForm, { RadioButton } from 'react-native-simple-radio-button';
+//install npm i react-native-simple-radio-button --save
+
+var Sexo = [
+    {label: 'Femenino', value: 0 },
+    {label: 'Masculino', value: 1 }
+  ];
 
 export class RegistroUsuario extends React.Component{
 
@@ -24,7 +31,6 @@ export class RegistroUsuario extends React.Component{
             Email: '',
             ConfirEmail: '',
             FechaNacimiento: new Date(),
-            Sexo: '',
             Calle: '',
             NoExterior: '',
             NoInterior: '',
@@ -58,7 +64,9 @@ export class RegistroUsuario extends React.Component{
                             value = {this.state.NumeroCelular}
                         />
                     
-                    <Picker selectedValue = {this.state.CompañiaCelular} onValueChange = {this.updateCompañia}>
+                    <Picker 
+                        style = {styles.compañia}
+                        selectedValue = {this.state.CompañiaCelular} onValueChange = {this.updateCompañia}>
                         <Picker.Item label = 'Telcel' value = 'telcel'/>
                         <Picker.Item label = 'Movistar' value = 'movistar'/>
                         <Picker.Item label = 'ATYT' value = 'aTYT'/>
@@ -124,6 +132,15 @@ export class RegistroUsuario extends React.Component{
                             onDateChange={(date) => {this.setState({FechaNacimiento: date})}}
                         />
 
+                    <Text style = {styles.label}> Sexo </Text>
+                        <RadioForm
+                            style={styles.sexo}
+                            radio_props={Sexo}
+                            initial={0}
+                            formHorizontal={true}
+                            labelHorizontal={true}
+                            onPress={(value) => {this.setState({value:value})}}
+                        />
 
                     <Text style = {styles.label}> Calle(s)</Text>
                         <TextInput
@@ -133,19 +150,37 @@ export class RegistroUsuario extends React.Component{
                             value = {this.state.Calle}
                         />
 
-<Text style = {styles.label}> Calle33(s)</Text>
+                    <Text style = {styles.label}> No. Exterior</Text>
                         <TextInput
                             style = {styles.input}
                             placeholder = 'F'
-                            onChangeText = {(text) => this.setState({Calle: text})}
-                            value = {this.state.Calle}
+                            onChangeText = {(text) => this.setState({NoExterior: text})}
+                            value = {this.state.NoExterior}
                         />
 
+                    <Text style = {styles.label}> No. Interior</Text>
+                        <TextInput
+                            style = {styles.input}
+                            placeholder = 'F'
+                            onChangeText = {(text) => this.setState({NoInterior: text})}
+                            value = {this.state.NoInterior}
+                        />
 
+                    <Text style = {styles.label}> Colonia </Text>
+                        <TextInput
+                            style = {styles.input}
+                            placeholder = 'F'
+                            onChangeText = {(text) => this.setState({Colonia: text})}
+                            value = {this.state.Colonia}
+                        />
 
-
-
-
+                    <Text style = {styles.label}> Codigo Postal </Text>
+                        <TextInput
+                            style = {styles.input}
+                            placeholder = 'F'
+                            onChangeText = {(text) => this.setState({CodigoPostal: text})}
+                            value = {this.state.CodigoPostal}
+                        />
 
             </View>
             </ScrollView>
@@ -191,8 +226,17 @@ const styles = StyleSheet.create({
         backgroundColor: '#2196F3'
     },
 
+    compañia:{
+        marginLeft: 36
+    },
+
     calendario:{
         width: 300,
         marginLeft: 36
+    },
+
+    sexo:{
+        marginLeft: 10,
+        justifyContent: 'space-evenly'
     },
 });
