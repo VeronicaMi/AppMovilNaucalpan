@@ -182,6 +182,7 @@ export class RegistroUsuario extends React.Component{
                             value = {this.state.CodigoPostal}
                         />
 
+
             </View>
             </ScrollView>
         )
@@ -191,7 +192,9 @@ export class RegistroUsuario extends React.Component{
 
 const styles = StyleSheet.create({
     container:{
-        flex: 1
+        flex: 1,
+        margin: 15
+
     },
 
     heading:{
@@ -211,11 +214,15 @@ const styles = StyleSheet.create({
 
     label:{
         fontSize: 18,
-        paddingLeft: 40
+        paddingLeft: 40,
+        margin: 15,
     },
 
     input:{
-        paddingLeft: 35
+        margin: 40,
+        borderBottomWidth: 3,
+        borderBottomColor: 'green',
+        width: 300,
     },
 
     buttonContainer: {
