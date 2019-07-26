@@ -4,6 +4,7 @@ import {
     Text,
     View,
     TextInput,
+    TouchableOpacity,
     Button,
     Alert,
     Picker,
@@ -12,6 +13,7 @@ import {
 } from 'react-native';
 import DatePicker from 'react-native-datepicker';
 import RadioForm, { RadioButton } from 'react-native-simple-radio-button';
+import { Encabezado } from '../Secciones/Encabezado.js'
 //install npm i react-native-simple-radio-button --save
 
 var Sexo = [
@@ -53,6 +55,7 @@ export class RegistroUsuario extends React.Component{
         return (
             <ScrollView>
             <View style = {styles.container}>
+                <Encabezado/>
                 <Text style = {styles.heading}> Registro </Text>
                     
                     <Text style = {styles.titulo}> Datos telefónicos </Text>
@@ -182,6 +185,12 @@ export class RegistroUsuario extends React.Component{
                             value = {this.state.CodigoPostal}
                         />
 
+                    <View style = {styles.button}>
+                        <TouchableOpacity style = {styles.buttonStyle} onPress={this.onPress}>
+                            <Text style = {styles.buttonText}>ENVIAR</Text>
+                        </TouchableOpacity>
+                    </View>
+
 
             </View>
             </ScrollView>
@@ -193,36 +202,34 @@ export class RegistroUsuario extends React.Component{
 const styles = StyleSheet.create({
     container:{
         flex: 1,
-        margin: 15
 
     },
 
     heading:{
         fontSize: 28,
         justifyContent: 'center',
-        paddingTop: 80,
-        paddingLeft: 50,
-        margin: 10,
+        paddingTop: 10,
+        paddingLeft: 130,
+        margin: 5,
     },
 
     titulo:{
         fontSize: 28,
         justifyContent: 'center',
         paddingLeft: 30,
-        margin: 20,
+        margin: 5,
     },
 
     label:{
         fontSize: 18,
         paddingLeft: 40,
-        margin: 15,
     },
 
     input:{
         margin: 40,
         borderBottomWidth: 3,
         borderBottomColor: 'green',
-        width: 300,
+        width: 290,
     },
 
     buttonContainer: {
@@ -234,16 +241,41 @@ const styles = StyleSheet.create({
     },
 
     compañia:{
-        marginLeft: 36
+        marginLeft: 36,
+        fontSize: 18,
+        
     },
 
     calendario:{
         width: 300,
-        marginLeft: 36
+        marginLeft: 36,
+        paddingTop: 20,
+        paddingBottom: 20,
     },
 
     sexo:{
         marginLeft: 10,
+        paddingTop: 20,
+        paddingBottom: 20,
         justifyContent: 'space-evenly'
+    },
+
+    button:{
+        flex:1,
+        alignItems: 'center',
+        borderColor: '#08ECD7',
+        borderBottomWidth: 1
+    },
+
+    buttonStyle:{
+        width: '50%',
+        height: '50%',
+        justifyContent: 'center',
+        alignItems: 'center',
+    },
+
+    buttonText:{
+        color: '#000000',
+        fontSize: 24,
     },
 });
