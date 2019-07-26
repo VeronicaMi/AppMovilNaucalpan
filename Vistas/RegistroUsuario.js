@@ -226,7 +226,8 @@ const styles = StyleSheet.create({
     },
 
     input:{
-        margin: 40,
+        margin:15,
+        marginLeft: 40,
         borderBottomWidth: 3,
         borderBottomColor: 'green',
         width: 290,
@@ -261,15 +262,20 @@ const styles = StyleSheet.create({
     },
 
     button:{
-        flex:1,
+        flex: 3,
+        marginTop: 60,
+        marginRight: 100,
+        marginLeft: 100,
         alignItems: 'center',
         borderColor: '#08ECD7',
-        borderBottomWidth: 1
+        borderBottomWidth: 5,
+        borderTopWidth: 5,
+        backgroundColor: '#08ECD7',
     },
 
     buttonStyle:{
         width: '50%',
-        height: '50%',
+        height: '80%',
         justifyContent: 'center',
         alignItems: 'center',
     },
