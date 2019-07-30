@@ -9,8 +9,11 @@ import {
     Alert,
     Picker,
     AsyncStorage,
-    ScrollView
+    ScrollView,
+    CheckBox
 } from 'react-native';
+//import {CheckBox} from 'react-native-elements';
+//npm i react-native-check-box --save
 import DatePicker from 'react-native-datepicker';
 import RadioForm, { RadioButton } from 'react-native-simple-radio-button';
 import { Encabezado } from '../Secciones/Encabezado.js'
@@ -38,6 +41,7 @@ export class RegistroUsuario extends React.Component{
             NoInterior: '',
             Colonia: '',
             CodigoPostal: '',
+            check: false,
         };
     };
 
@@ -46,6 +50,17 @@ export class RegistroUsuario extends React.Component{
         this.setState({CompañiaCelular: CompañiaCelular})
     }
 
+    checkBoxTest(){
+        this.setState({
+            check: !this.state.check
+        })
+    }
+
+    state = {
+        termsAccepted: false
+    }
+
+    handleCheckBox = () => this.setState({ termsAccepted: !this.state.termsAccepted })
 
     _onPressButton(){
         Alert.alert('Registrado correctamente')
@@ -185,6 +200,14 @@ export class RegistroUsuario extends React.Component{
                             value = {this.state.CodigoPostal}
                         />
 
+                    <CheckBox
+                            style = {styles.checkBox}
+                            titulo = "hola"
+                            Size = {40}
+                            value = {this.state.check}
+                            onChange = {() => this.checkBoxTest()}
+                        />
+
                     <View style = {styles.button}>
                         <TouchableOpacity style = {styles.buttonStyle} onPress={this.onPress}>
                             <Text style = {styles.buttonText}>ENVIAR</Text>
@@ -263,7 +286,7 @@ const styles = StyleSheet.create({
 
     button:{
         flex: 3,
-        marginTop: 60,
+        marginTop: 90,
         marginRight: 100,
         marginLeft: 100,
         alignItems: 'center',
@@ -284,4 +307,11 @@ const styles = StyleSheet.create({
         color: '#000000',
         fontSize: 24,
     },
+
+    checkBox:{
+        flex: 1, 
+        margin: 30,
+        padding: 10
+    },
+
 });
