@@ -16,8 +16,9 @@ import {
 //npm i react-native-check-box --save
 import DatePicker from 'react-native-datepicker';
 import RadioForm, { RadioButton } from 'react-native-simple-radio-button';
-import { Encabezado } from '../Secciones/Encabezado.js'
+import { Encabezado } from '../Secciones/Encabezado.js';
 //install npm i react-native-simple-radio-button --save
+import { StackNavigator } from 'react-navigation';
 
 var Sexo = [
     {label: 'Femenino', value: 0 },
@@ -25,6 +26,9 @@ var Sexo = [
   ];
 
 export class RegistroUsuario extends React.Component{
+    static navigationOptions = {
+        Encabezado = null
+    }
 
     constructor(props){
         super(props);
@@ -66,7 +70,13 @@ export class RegistroUsuario extends React.Component{
         Alert.alert('Registrado correctamente')
     }
 
+    onPress = () => {
+        this.setState({
+        })
+      }
+
     render(){
+        const { navigate } = this.props.navigation;
         return (
             <ScrollView>
             <View style = {styles.container}>
@@ -202,11 +212,18 @@ export class RegistroUsuario extends React.Component{
 
                     <CheckBox
                             style = {styles.checkBox}
-                            titulo = "hola"
+                            title = "hola"
                             Size = {40}
                             value = {this.state.check}
                             onChange = {() => this.checkBoxTest()}
-                        />
+                            text = 'foooooooo'         
+                   />
+
+                    <TouchableOpacity 
+                            style = {styles.terminos}
+                            onPress={() => this.props.navigate('TerminosCondicionesRT')}>
+                            <Text>Terminos y condiciones</Text>
+                    </TouchableOpacity>
 
                     <View style = {styles.button}>
                         <TouchableOpacity style = {styles.buttonStyle} onPress={this.onPress}>
@@ -286,7 +303,6 @@ const styles = StyleSheet.create({
 
     button:{
         flex: 3,
-        marginTop: 90,
         marginRight: 100,
         marginLeft: 100,
         alignItems: 'center',
@@ -301,6 +317,7 @@ const styles = StyleSheet.create({
         height: '80%',
         justifyContent: 'center',
         alignItems: 'center',
+        
     },
 
     buttonText:{
@@ -313,5 +330,10 @@ const styles = StyleSheet.create({
         margin: 30,
         padding: 10
     },
+
+    terminos:{
+        margin: 70,
+        marginTop: -57,
+    }
 
 });
