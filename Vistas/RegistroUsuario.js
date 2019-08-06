@@ -16,9 +16,9 @@ import {
 //npm i react-native-check-box --save
 import DatePicker from 'react-native-datepicker';
 import RadioForm, { RadioButton } from 'react-native-simple-radio-button';
-import { Encabezado } from '../Secciones/Encabezado.js';
-//install npm i react-native-simple-radio-button --save
 import { StackNavigator } from 'react-navigation';
+import { TerminosCondiciones} from '../Vistas/TerminosYCondiciones.js';
+//install npm i react-native-simple-radio-button --save
 
 var Sexo = [
     {label: 'Femenino', value: 0 },
@@ -26,9 +26,6 @@ var Sexo = [
   ];
 
 export class RegistroUsuario extends React.Component{
-    static navigationOptions = {
-        Encabezado = null
-    }
 
     constructor(props){
         super(props);
@@ -60,27 +57,16 @@ export class RegistroUsuario extends React.Component{
         })
     }
 
-    state = {
-        termsAccepted: false
-    }
-
-    handleCheckBox = () => this.setState({ termsAccepted: !this.state.termsAccepted })
-
     _onPressButton(){
         Alert.alert('Registrado correctamente')
     }
 
-    onPress = () => {
-        this.setState({
-        })
-      }
-
     render(){
-        const { navigate } = this.props.navigation;
+        //const { navigate } = this.props.navigation;
         return (
             <ScrollView>
             <View style = {styles.container}>
-                <Encabezado/>
+                
                 <Text style = {styles.heading}> Registro </Text>
                     
                     <Text style = {styles.titulo}> Datos telefónicos </Text>
@@ -224,6 +210,10 @@ export class RegistroUsuario extends React.Component{
                             onPress={() => this.props.navigate('TerminosCondicionesRT')}>
                             <Text>Terminos y condiciones</Text>
                     </TouchableOpacity>
+
+                    <Text style = {styles.label}>
+                        dfghjkpoiuytrfg fvbjk ghjkigg hjkkj hghjkl ´poiuyf jklññ gfvb kl+´poiuytre r67890'poi u
+                    </Text>
 
                     <View style = {styles.button}>
                         <TouchableOpacity style = {styles.buttonStyle} onPress={this.onPress}>

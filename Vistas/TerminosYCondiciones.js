@@ -12,7 +12,9 @@ import {
     ScrollView,
     CheckBox
 } from 'react-native';
-import { Encabezado } from '../Secciones/Encabezado.js'; 
+import { Encabezado } from '../Secciones/Encabezado.js';
+import { StackNavigator} from 'react-navigation';
+
 
 export class TerminosCondiciones extends React.Component{
     static navigationOptions = {
@@ -20,9 +22,13 @@ export class TerminosCondiciones extends React.Component{
     };
 
     render(){
+        const { navigate } = this.props.navigation;
         return (
-            <View>
-                 
+            <View style = {styles.container}>
+                <Encabezado/>
+                 <Text style = {styles.texto}>
+                     Aqui van los terminos y condiciones 
+                 </Text>
             </View>
         );
     }
@@ -30,7 +36,13 @@ export class TerminosCondiciones extends React.Component{
 
 const styles = StyleSheet.create({
     container:{
+        flex: 1,
 
+    },
+
+    texto:{
+        flex: 1,
+        fontSize: 30,
     },
 
 });

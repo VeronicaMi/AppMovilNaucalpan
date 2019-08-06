@@ -1,10 +1,15 @@
 import React from 'react';
 //import { RegistroCelular } from './Vistas/RegistroCelular';
+import { Principal } from './Vistas/Principal.js';
 import { RegistroUsuario } from './Vistas/RegistroUsuario';
 import { TerminosCondiciones } from './Vistas/TerminosYCondiciones';
 import { StackNavigator } from 'react-navigation';
 
 const Rutas = StackNavigator({
+  PrincipalRT:{
+    screen: Principal
+  },
+
   RegistroUsuarioRT:{
     screen: RegistroUsuario 
   },
@@ -14,7 +19,7 @@ const Rutas = StackNavigator({
   },
 },
   {
-    rutaInicial: 'RegistroUsuarioRT'
+    rutaInicial: 'PrincipalRT'
   }
 );
 

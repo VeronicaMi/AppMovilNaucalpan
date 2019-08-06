@@ -9,15 +9,22 @@ import {
     AsyncStorage
 } from 'react-native';
 import { StackNavigator } from 'react-navigation';
-import { RegistroCelular } from '../Vistas/RegistroCelular.js';
+import { Encabezado } from '../Secciones/Encabezado.js';
+import { RegistroUsuario } from '../Vistas/RegistroUsuario.js';
 
 export class Principal extends React.Component{
+
+    static  navigationOptions = { Encabezado: null};
 
     render(){
         const { navigate } = this.props.navigation;
 
         return(
-            < RegistroCelular />
+            <View>
+                <Encabezado navigate = {navigate} message = 'Hola' />
+                <RegistroUsuario navigate = {navigate} />
+                
+            </View>
         );
     }
     
