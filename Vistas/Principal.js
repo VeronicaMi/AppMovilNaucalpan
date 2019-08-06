@@ -20,13 +20,18 @@ export class Principal extends React.Component{
         const { navigate } = this.props.navigation;
 
         return(
-            <View>
+            <View style = {styles.container}>
                 <Encabezado navigate = {navigate} message = 'Hola' />
                 <RegistroUsuario navigate = {navigate} />
                 
             </View>
         );
     }
-    
-
 }
+
+const styles = StyleSheet.create({
+    container:{
+        flex: 1,
+
+    },
+});
