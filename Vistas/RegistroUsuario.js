@@ -67,7 +67,6 @@ export class RegistroUsuario extends React.Component{
     };
 
     render(){
-        const { navigate } = this.props.navigation;
         return (
             <ScrollView>
             <View style = {styles.container}>
@@ -211,7 +210,7 @@ export class RegistroUsuario extends React.Component{
 
                     <TouchableOpacity 
                             style = {styles.terminos}
-                            onPress={() => this.siguiente}>
+                            onPress={this.siguiente}>
                             <Text>Terminos y condiciones</Text>
                     </TouchableOpacity>
 

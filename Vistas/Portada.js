@@ -13,14 +13,11 @@ import {
     CheckBox
 } from 'react-native';
 import { StackNavigator} from 'react-navigation';
-
+import { Logo } from '../Secciones/Logo.js';
 
 
 export class Portada extends React.Component{
-
-
     render(){
-            //const {navigate} = this.props.navigation;
         return(
             <View>
                 <Text>
@@ -44,4 +41,15 @@ const styles = StyleSheet.create({
 
     },
 
+    inicio:{
+        borderColor: '#08ECD7',
+        borderBottomWidth: 5,
+        borderTopWidth: 5,
+        backgroundColor: '#08ECD7',
+    }
+
 });
+
+/*static navigationOptions = {
+        headerTitle: <Logo />,
+      };*/
