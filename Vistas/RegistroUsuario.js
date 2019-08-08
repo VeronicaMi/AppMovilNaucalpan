@@ -66,7 +66,11 @@ export class RegistroUsuario extends React.Component{
         this.props.navigation.navigate('TerminosCondicionesRT');
     };
 
+    static navigationOptions = {
+        title : ' Condiciones',
+    };
     render(){
+
         return (
             <ScrollView>
             <View style = {styles.container}>
@@ -302,7 +306,7 @@ const styles = StyleSheet.create({
     },
 
     buttonStyle:{
-        width: '50%',
+        width: '80%',
         height: '80%',
         justifyContent: 'center',
         alignItems: 'center',

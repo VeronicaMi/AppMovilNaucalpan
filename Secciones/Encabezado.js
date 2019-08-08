@@ -25,7 +25,7 @@ export class Encabezado extends React.Component{
 
 const styles = StyleSheet.create({
     headStyle:{
-        paddingTop: 30,
+        paddingTop: 10,
         paddingBottom: 10,
         paddingRight: 10,
         backgroundColor: '#00FF2A'

@@ -17,6 +17,10 @@ import { Logo } from '../Secciones/Logo.js';
 
 
 export class Portada extends React.Component{
+    static navigationOptions = {
+        title : 'Terminos',
+        headerStyle:{ backgroundColor: '#f4511e',},
+    };
     render(){
         return(
             <View>
