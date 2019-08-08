@@ -18,6 +18,7 @@ import DatePicker from 'react-native-datepicker';
 import RadioForm, { RadioButton } from 'react-native-simple-radio-button';
 import { StackNavigator } from 'react-navigation';
 import { TerminosCondiciones} from '../Vistas/TerminosYCondiciones.js';
+import { Encabezado } from '../Secciones/Encabezado.js';
 //install npm i react-native-simple-radio-button --save
 
 var Sexo = [
@@ -61,12 +62,17 @@ export class RegistroUsuario extends React.Component{
         Alert.alert('Registrado correctamente')
     }
 
+    siguiente = () => {
+        this.props.navigation.navigate('TerminosCondicionesRT');
+    };
+
     render(){
-        //const { navigate } = this.props.navigation;
+        const { navigate } = this.props.navigation;
         return (
             <ScrollView>
             <View style = {styles.container}>
-                
+                <Encabezado/>
+
                 <Text style = {styles.heading}> Registro </Text>
                     
                     <Text style = {styles.titulo}> Datos telefónicos </Text>
@@ -198,22 +204,16 @@ export class RegistroUsuario extends React.Component{
 
                     <CheckBox
                             style = {styles.checkBox}
-                            title = "hola"
                             Size = {40}
                             value = {this.state.check}
-                            onChange = {() => this.checkBoxTest()}
-                            text = 'foooooooo'         
+                            onChange = {() => this.checkBoxTest()}       
                    />
 
                     <TouchableOpacity 
                             style = {styles.terminos}
-                            onPress={() => this.props.navigate('TerminosCondicionesRT')}>
+                            onPress={() => this.siguiente}>
                             <Text>Terminos y condiciones</Text>
                     </TouchableOpacity>
-
-                    <Text style = {styles.label}>
-                        dfghjkpoiuytrfg fvbjk ghjkigg hjkkj hghjkl ´poiuyf jklññ gfvb kl+´poiuytre r67890'poi u
-                    </Text>
 
                     <View style = {styles.button}>
                         <TouchableOpacity style = {styles.buttonStyle} onPress={this.onPress}>

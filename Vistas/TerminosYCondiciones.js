@@ -18,14 +18,13 @@ import { StackNavigator} from 'react-navigation';
 
 export class TerminosCondiciones extends React.Component{
     static navigationOptions = {
-        Encabezado: null
+        title : 'Terminos y Condiciones',
     };
 
     render(){
         const { navigate } = this.props.navigation;
         return (
             <View style = {styles.container}>
-                <Encabezado/>
                  <Text style = {styles.texto}>
                      Aqui van los terminos y condiciones 
                  </Text>

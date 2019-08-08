@@ -11,19 +11,18 @@ import {
 import { StackNavigator } from 'react-navigation';
 import { Encabezado } from '../Secciones/Encabezado.js';
 import { RegistroUsuario } from '../Vistas/RegistroUsuario.js';
+import { Portada } from '../Vistas/Portada.js';
 
 export class Principal extends React.Component{
 
-    static  navigationOptions = { Encabezado: null};
+    static  navigationOptions = { title: null};
 
     render(){
         const { navigate } = this.props.navigation;
 
         return(
             <View style = {styles.container}>
-                <Encabezado navigate = {navigate} message = 'Hola' />
-                <RegistroUsuario navigate = {navigate} />
-                
+                <Portada navigate = {navigate} />                
             </View>
         );
     }

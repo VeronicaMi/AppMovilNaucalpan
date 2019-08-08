@@ -4,10 +4,15 @@ import { Principal } from './Vistas/Principal.js';
 import { RegistroUsuario } from './Vistas/RegistroUsuario';
 import { TerminosCondiciones } from './Vistas/TerminosYCondiciones';
 import { StackNavigator } from 'react-navigation';
+import { Portada } from './Vistas/Portada.js';
 
 const Rutas = StackNavigator({
   PrincipalRT:{
     screen: Principal
+  },
+
+  PortadaRT:{
+    screen: Portada
   },
 
   RegistroUsuarioRT:{
