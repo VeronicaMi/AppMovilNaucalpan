@@ -26,6 +26,8 @@ var Sexo = [
     {label: 'Masculino', value: 1 }
   ];
 
+ 
+
 export class RegistroUsuario extends React.Component{
 
     constructor(props){
@@ -66,16 +68,11 @@ export class RegistroUsuario extends React.Component{
         this.props.navigation.navigate('TerminosCondicionesRT');
     };
 
-    static navigationOptions = {
-        title : ' Condiciones',
-    };
     render(){
-
         return (
             <ScrollView>
             <View style = {styles.container}>
                 <Encabezado/>
-
                 <Text style = {styles.heading}> Registro </Text>
                     
                     <Text style = {styles.titulo}> Datos telefónicos </Text>

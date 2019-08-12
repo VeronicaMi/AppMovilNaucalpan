@@ -8,14 +8,13 @@ import {
     Alert,
     AsyncStorage
 } from 'react-native';
-import { StackNavigator } from 'react-navigation';
 import { Encabezado } from '../Secciones/Encabezado.js';
 import { RegistroUsuario } from '../Vistas/RegistroUsuario.js';
 import { Portada } from '../Vistas/Portada.js';
 
 export class Principal extends React.Component{
 
-    static  navigationOptions = { title: null};
+    static  navigationOptions = { headerTitle: null};
 
     render(){
         const { navigate } = this.props.navigation;
