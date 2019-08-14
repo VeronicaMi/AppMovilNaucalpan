@@ -1,22 +1,15 @@
 import React from 'react';
 import {
     StyleSheet,
-    Text,
-    View,
-    TextInput,
-    TouchableOpacity,
-    Button,
-    Alert,
-    Picker,
-    AsyncStorage,
-    ScrollView,
-    CheckBox
 } from 'react-native';
 
 import AppIntroSlider from 'react-native-app-intro-slider';
-import { StackNavigator} from 'react-navigation';
+//npm i react-native-app-intro-slider --save
+import { createAppContainer, createStackNavigator} from 'react-navigation';
+// { StackNavigator} from 'react-navigation';
 import { Logo } from '../Secciones/Logo.js';
 import { RegistroUsuario } from './RegistroUsuario.js';
+import { TerminosCondiciones} from './TerminosYCondiciones.js';
 
 
 export class Portada extends React.Component{
@@ -48,9 +41,7 @@ export class Portada extends React.Component{
             if (this.state.showRealApp) {
             //Real Application
         return(
-            <View >
-                <RegistroUsuario />  
-            </View>
+            <RegistroUsuario/>
       );
     }
     else {
@@ -68,6 +59,18 @@ export class Portada extends React.Component{
       }
     }
 };
+
+/*const stack = createStackNavigator({
+  RegistroUsuarioRT:{
+    screen: RegistroUsuario 
+  },
+
+  TerminosCondicionesRT:{
+    screen: TerminosCondiciones
+  },
+});
+
+const AppContainer = createAppContainer(stack);*/
 
 const styles = StyleSheet.create({
     image: {

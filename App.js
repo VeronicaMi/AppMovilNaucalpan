@@ -14,7 +14,6 @@ const Rutas = StackNavigator({
   PortadaRT:{
     screen: Portada
   },
-
   RegistroUsuarioRT:{
     screen: RegistroUsuario 
   },

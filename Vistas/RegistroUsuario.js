@@ -16,7 +16,6 @@ import {
 //npm i react-native-check-box --save
 import DatePicker from 'react-native-datepicker';
 import RadioForm, { RadioButton } from 'react-native-simple-radio-button';
-import { StackNavigator } from 'react-navigation';
 import { TerminosCondiciones} from '../Vistas/TerminosYCondiciones.js';
 import { Encabezado } from '../Secciones/Encabezado.js';
 //install npm i react-native-simple-radio-button --save
@@ -25,8 +24,6 @@ var Sexo = [
     {label: 'Femenino', value: 0 },
     {label: 'Masculino', value: 1 }
   ];
-
- 
 
 export class RegistroUsuario extends React.Component{
 
