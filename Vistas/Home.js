@@ -3,23 +3,34 @@ import {
     StyleSheet,
     Text,
     View,
-    TextInput,
-    TouchableOpacity,
-    Button,
-    Alert,
-    Picker,
-    AsyncStorage,
-    ScrollView,
-    CheckBox
 } from 'react-native';
+import { MapView } from 'react-native-maps';
 
-export class AvisoPrivacidad extends React.Component{
-    
+export class Home extends React.Component{
+    static  navigationOptions = { header: null};
+
+    constructor(props){
+        super(props);
+
+        this.state = {
+            region: {
+                latitude: 37.78825,
+                longitude: -122.4324,
+                latitudeDelta: 0.922,
+                longitudeDelta: 0.0421,
+            }
+        }
+    }
     render(){
         return(
             <View>
+               <MapView
+                    initialRegion = { this.state.region }
+                    showsCompass = {true}
+                    rotateEnable = {false}
+                    style = {{felx: 1}}
                
-
+               />
             </View>
         );
     }

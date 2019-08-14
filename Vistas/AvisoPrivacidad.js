@@ -14,11 +14,15 @@ import {
 } from 'react-native';
 
 export class AvisoPrivacidad extends React.Component{
-    
+    static navigationOptions = {
+        title : 'Aviso de privacidad',
+    };
     render(){
         return(
-            <View>
-               
+            <View style = {styles.container}>
+                <Text style = {styles.texto}>
+                   Aqui va el aviso de Privacidad
+                </Text>
 
             </View>
         );
@@ -29,6 +33,11 @@ const styles = StyleSheet.create({
     container:{
         flex: 1,
 
+    },
+
+    texto:{
+        flex: 1,
+        fontSize: 30,
     },
 
 });

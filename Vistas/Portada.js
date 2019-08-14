@@ -9,7 +9,6 @@ import { createAppContainer, createStackNavigator} from 'react-navigation';
 // { StackNavigator} from 'react-navigation';
 import { Logo } from '../Secciones/Logo.js';
 import { RegistroUsuario } from './RegistroUsuario.js';
-import { TerminosCondiciones} from './TerminosYCondiciones.js';
 
 
 export class Portada extends React.Component{

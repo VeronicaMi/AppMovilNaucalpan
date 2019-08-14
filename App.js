@@ -3,8 +3,11 @@ import React from 'react';
 import { Principal } from './Vistas/Principal.js';
 import { RegistroUsuario } from './Vistas/RegistroUsuario';
 import { TerminosCondiciones } from './Vistas/TerminosYCondiciones';
+import { AvisoPrivacidad } from './Vistas/AvisoPrivacidad.js';
+import { Home } from './Vistas/Home.js';
 import { StackNavigator } from 'react-navigation';
 import { Portada } from './Vistas/Portada.js';
+
 
 const Rutas = StackNavigator({
   PrincipalRT:{
@@ -20,6 +23,14 @@ const Rutas = StackNavigator({
 
   TerminosCondicionesRT:{
     screen: TerminosCondiciones
+  },
+
+  AvisoPrivacidadRT:{
+    screen: AvisoPrivacidad
+  },
+
+  HomeRT:{
+    screen: Home
   },
 },
   {

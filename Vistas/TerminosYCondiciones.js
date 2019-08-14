@@ -12,9 +12,6 @@ import {
     ScrollView,
     CheckBox
 } from 'react-native';
-import { Encabezado } from '../Secciones/Encabezado.js';
-import { StackNavigator} from 'react-navigation';
-
 
 export class TerminosCondiciones extends React.Component{
     static navigationOptions = {

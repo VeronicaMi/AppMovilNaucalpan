@@ -14,14 +14,14 @@ import { Portada } from '../Vistas/Portada.js';
 
 export class Principal extends React.Component{
 
-    static  navigationOptions = { headerTitle: null};
+    static  navigationOptions = { header: null};
 
     render(){
         const { navigate } = this.props.navigation;
 
         return(
             <View style = {styles.container}>
-                <Portada navigate = {navigate} />                
+                <RegistroUsuario navigate = {navigate} />                
             </View>
         );
     }

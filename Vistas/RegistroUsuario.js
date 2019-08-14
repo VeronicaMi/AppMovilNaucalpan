@@ -61,8 +61,13 @@ export class RegistroUsuario extends React.Component{
         Alert.alert('Registrado correctamente')
     }
 
-    siguiente = () => {
+    /*siguiente = () => {
         this.props.navigation.navigate('TerminosCondicionesRT');
+    };*/
+
+    static navigationOptions = {
+        header: null, 
+        title: 'prueba'
     };
 
     render(){
@@ -208,12 +213,21 @@ export class RegistroUsuario extends React.Component{
 
                     <TouchableOpacity 
                             style = {styles.terminos}
-                            onPress={this.siguiente}>
+                            onPress={() => this.props.navigate('TerminosCondicionesRT')}>
                             <Text>Terminos y condiciones</Text>
                     </TouchableOpacity>
 
+                    <TouchableOpacity 
+                            style = {styles.privacidad}
+                            onPress={() => this.props.navigate('AvisoPrivacidadRT')}>
+                            <Text style = {styles.privacidadText}>
+                                Aviso de privacidad
+                            </Text>
+                    </TouchableOpacity>
+
                     <View style = {styles.button}>
-                        <TouchableOpacity style = {styles.buttonStyle} onPress={this.onPress}>
+                        <TouchableOpacity style = {styles.buttonStyle} 
+                            onPress={() => this.props.navigate('HomeRT')}>
                             <Text style = {styles.buttonText}>ENVIAR</Text>
                         </TouchableOpacity>
                     </View>
@@ -320,7 +334,16 @@ const styles = StyleSheet.create({
 
     terminos:{
         margin: 70,
+        //No mover marginTop
         marginTop: -57,
-    }
+    },
 
+    privacidad:{
+        margin: 70,
+        marginTop: -50,
+    },
+
+    privacidadText:{
+        textDecorationLine: 'underline'
+    }
 });
