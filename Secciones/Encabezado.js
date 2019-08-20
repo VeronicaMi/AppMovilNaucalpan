@@ -8,7 +8,7 @@ import {
     Alert
 } from 'react-native';
 
-export class Encabezado extends React.Component{
+export default class Encabezado extends React.Component{
 
         constructor(props){
             super(props);

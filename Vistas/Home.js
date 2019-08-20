@@ -6,10 +6,7 @@ import {
 } from 'react-native';
 import { MapView } from 'react-native-maps';
 
-export class Home extends React.Component{
-    static  navigationOptions = { header: null};
-
-    constructor(props){
+/* constructor(props){
         super(props);
 
         this.state = {
@@ -21,16 +18,24 @@ export class Home extends React.Component{
             }
         }
     }
-    render(){
-        return(
-            <View>
-               <MapView
+    
+    <MapView
                     initialRegion = { this.state.region }
                     showsCompass = {true}
                     rotateEnable = {false}
                     style = {{felx: 1}}
                
                />
+    */ 
+
+export class Home extends React.Component{
+    static  navigationOptions = { header: null};
+
+   
+    render(){
+        return(
+            <View>
+               
             </View>
         );
     }

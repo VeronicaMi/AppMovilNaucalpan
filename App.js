@@ -8,8 +8,15 @@ import { Home } from './Vistas/Home.js';
 import { StackNavigator } from 'react-navigation';
 import { Portada } from './Vistas/Portada.js';
 
+import PantallaPrincipal from './Navegacion/PantallaPrincipal.js';
+import EmergenciaMedica from './Navegacion/EmergenciaMedica.js';
+import EmergenciaPolicial from './Navegacion/EmergenciaPolicial.js';
+import EmergenciaProteccionCivil from './Navegacion/EmergenciaProteccionCivil.js';
 
-const Rutas = StackNavigator({
+import DatosMedicos from './Vistas/DatosMedicos.js';
+
+
+/*const Rutas = StackNavigator({  
   PrincipalRT:{
     screen: Principal
   },
@@ -36,12 +43,12 @@ const Rutas = StackNavigator({
   {
     rutaInicial: 'PrincipalRT'
   }
-);
+);*/
 
 export default class App extends React.Component {
   render(){
     return(
-      <Rutas/>
+        <DatosMedicos/>
     );
   }
 }
