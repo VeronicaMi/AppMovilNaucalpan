@@ -104,6 +104,15 @@ export default class DatosMedicos extends React.Component{
                             onChangeText = {(text) => this.setState({DonanteOrganos: text})}
                             value = {this.state.DonanteOrganos}
                         />
+
+                    <View style = {styles.button}>
+                        <TouchableOpacity style = {styles.buttonStyle} 
+                            onPress={() => this.props.navigate('HomeRT')}>
+                            <Text style = {styles.buttonText}>GUARDAR</Text>
+                        </TouchableOpacity>
+                    </View>
+                    
+
                 </View>
             </ScrollView>
         );
@@ -134,5 +143,30 @@ const styles = StyleSheet.create({
         borderBottomWidth: 3,
         borderBottomColor: 'green',
         width: 290,
+    },
+
+    button:{
+        flex: 1,
+        marginTop: 40,
+        marginRight: 100,
+        marginLeft: 100,
+        alignItems: 'center',
+        borderColor: '#08ECD7',
+        borderBottomWidth: 5,
+        borderTopWidth: 5,
+        backgroundColor: '#08ECD7',
+    },
+
+    buttonStyle:{
+        width: '80%',
+        height: '80%',
+        justifyContent: 'center',
+        alignItems: 'center',
+        
+    },
+
+    buttonText:{
+        color: '#000000',
+        fontSize: 24,
     },
 });

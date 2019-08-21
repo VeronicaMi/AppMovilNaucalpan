@@ -14,6 +14,8 @@ import EmergenciaPolicial from './Navegacion/EmergenciaPolicial.js';
 import EmergenciaProteccionCivil from './Navegacion/EmergenciaProteccionCivil.js';
 
 import DatosMedicos from './Vistas/DatosMedicos.js';
+import Contactos from './Vistas/Contactos.js';
+import BotonPanico from './Vistas/BotonPanico.js';
 
 
 /*const Rutas = StackNavigator({  
@@ -48,7 +50,7 @@ import DatosMedicos from './Vistas/DatosMedicos.js';
 export default class App extends React.Component {
   render(){
     return(
-        <DatosMedicos/>
+        <BotonPanico/>
     );
   }
 }
