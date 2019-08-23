@@ -12,7 +12,7 @@ import { Encabezado } from '../Secciones/Encabezado.js';
 import { RegistroUsuario } from '../Vistas/RegistroUsuario.js';
 import { Portada } from '../Vistas/Portada.js';
 
-export class Principal extends React.Component{
+export default class Principal extends React.Component{
 
     static  navigationOptions = { header: null};
 
@@ -21,7 +21,7 @@ export class Principal extends React.Component{
 
         return(
             <View style = {styles.container}>
-                <RegistroUsuario navigate = {navigate} />                
+                <Portada navigate = {navigate} />                
             </View>
         );
     }

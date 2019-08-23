@@ -72,7 +72,7 @@ export default class Contactos extends React.Component{
                         </TouchableOpacity>
                     </View>
             </View>
-        );
+        );9
     }
 };
 

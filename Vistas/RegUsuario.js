@@ -25,8 +25,7 @@ var Sexo = [
     {label: 'Masculino', value: 1 }
   ];
 
-export default class RegistroUsuario extends React.Component{
-
+export default class RegUsuario extends React.Component{
     constructor(props){
         super(props);
         this.state = {
@@ -61,20 +60,12 @@ export default class RegistroUsuario extends React.Component{
         Alert.alert('Registrado correctamente')
     }
 
-    /*siguiente = () => {
-        this.props.navigation.navigate('TerminosCondicionesRT');
-    };*/
-
-    static navigationOptions = {
-        header: null, 
-        title: 'prueba'
-    };
 
     render(){
-        return (
+        return(
             <ScrollView>
-            <View style = {styles.container}>
-                <Encabezado/>
+                <View style = {styles.container}>
+                    <Encabezado/>
                 <Text style = {styles.heading}> Registro </Text>
                     
                     <Text style = {styles.titulo}> Datos telefónicos </Text>
@@ -85,7 +76,7 @@ export default class RegistroUsuario extends React.Component{
                             onChangeText = {(text) => this.setState({NumeroCelular: text})}
                             value = {this.state.NumeroCelular}
                         />
-                    
+
                     <Picker 
                         style = {styles.compañia}
                         selectedValue = {this.state.CompañiaCelular} onValueChange = {this.updateCompañia}>
@@ -233,12 +224,11 @@ export default class RegistroUsuario extends React.Component{
                     </View>
 
 
-            </View>
+                </View>
             </ScrollView>
-        );
+        )
     }
-
-};
+}
 
 const styles = StyleSheet.create({
     container:{

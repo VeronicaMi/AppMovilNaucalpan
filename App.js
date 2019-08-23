@@ -1,8 +1,9 @@
 import React from 'react';
-//import { RegistroCelular } from './Vistas/RegistroCelular';
+import { RegistroCelular } from './Vistas/RegistroCelular';
 import { Principal } from './Vistas/Principal.js';
-import { RegistroUsuario } from './Vistas/RegistroUsuario';
-import { TerminosCondiciones } from './Vistas/TerminosYCondiciones';
+import { RegistroUsuario } from './Vistas/RegistroUsuario.js';
+import RegUsuario from './Vistas/RegUsuario.js';
+import { TerminosCondiciones } from './Vistas/TerminosYCondiciones.js';
 import { AvisoPrivacidad } from './Vistas/AvisoPrivacidad.js';
 import { Home } from './Vistas/Home.js';
 import { StackNavigator } from 'react-navigation';
@@ -38,9 +39,6 @@ import BotonPanico from './Vistas/BotonPanico.js';
     screen: AvisoPrivacidad
   },
 
-  HomeRT:{
-    screen: Home
-  },
 },
   {
     rutaInicial: 'PrincipalRT'
@@ -50,7 +48,7 @@ import BotonPanico from './Vistas/BotonPanico.js';
 export default class App extends React.Component {
   render(){
     return(
-        <BotonPanico/>
+        <RegUsuario/>
     );
   }
 }

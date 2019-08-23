@@ -9,9 +9,10 @@ import { createAppContainer, createStackNavigator} from 'react-navigation';
 // { StackNavigator} from 'react-navigation';
 import { Logo } from '../Secciones/Logo.js';
 import { RegistroUsuario } from './RegistroUsuario.js';
+import { View } from 'react-native-animatable';
 
 
-export class Portada extends React.Component{
+export default class Portada extends React.Component{
     constructor(props) {
         super(props);
         this.state = {
@@ -40,7 +41,7 @@ export class Portada extends React.Component{
             if (this.state.showRealApp) {
             //Real Application
         return(
-            <RegistroUsuario/>
+        <RegistroUsuario/>
       );
     }
     else {
@@ -58,18 +59,6 @@ export class Portada extends React.Component{
       }
     }
 };
-
-/*const stack = createStackNavigator({
-  RegistroUsuarioRT:{
-    screen: RegistroUsuario 
-  },
-
-  TerminosCondicionesRT:{
-    screen: TerminosCondiciones
-  },
-});
-
-const AppContainer = createAppContainer(stack);*/
 
 const styles = StyleSheet.create({
     image: {

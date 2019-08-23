@@ -6,12 +6,6 @@ import {
     Dimensions,
 } from 'react-native';
 
-/*import {
-    createDrawerNavigator,
-    createStackNavigator,
-    createAppContainer,
-  } from 'react-navigation';
-import { DrawerNavigator, StackNavigator } from 'react-navigation';*/
 import EmergenciaMedica from './EmergenciaMedica.js';
 /*import EmergenciaPolicial from './EmergenciaPolicial.js';
 import EmergenciaProteccionCivil from './EmergenciaProteccionCivil.js';
