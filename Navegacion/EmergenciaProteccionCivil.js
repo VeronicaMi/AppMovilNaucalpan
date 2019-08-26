@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {Component} from 'react';
 import {
     StyleSheet,
     Text,
@@ -7,7 +7,7 @@ import {
 import Encabezado from '../Secciones/Encabezado.js'
 import OpcionEmergencia from '../Navegacion/OpcionEmergencia.js';
 
-export default class EmergenciaProteccionCivil extends React.Component{
+export default class EmergenciaProteccionCivil extends Component{
     static  navigationOptions = { header: null};
 
    

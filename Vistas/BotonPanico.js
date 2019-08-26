@@ -66,13 +66,12 @@ export default class Contactos extends React.Component{
                     </Picker>
 
                     <View style = {styles.button}>
-                        <TouchableOpacity style = {styles.buttonStyle} 
-                            onPress={() => this.props.navigate('HomeRT')}>
+                        <TouchableOpacity style = {styles.buttonStyle}>
                             <Text style = {styles.buttonText}>GUARDAR</Text>
                         </TouchableOpacity>
                     </View>
             </View>
-        );9
+        );
     }
 };
 
@@ -95,7 +94,7 @@ const styles = StyleSheet.create({
 
     button:{
         flex: 1,
-        marginTop: 450,
+        marginTop: 40,
         marginRight: 100,
         marginLeft: 100,
         alignItems: 'center',

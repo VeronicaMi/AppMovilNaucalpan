@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {Component} from 'react';
 import {
     StyleSheet,
     Text,
@@ -7,12 +7,7 @@ import {
     Image,
 } from 'react-native';
 
-export default class EmergenciaMedica extends React.Component{
-    static  navigationOptions = { 
-        title: 'Emergencia Medica'
-    };
-
-   
+export default class OpcionEmergencia extends Component{   
     render(){
         return(
             <View style = {styles.container}>

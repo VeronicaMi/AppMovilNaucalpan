@@ -14,9 +14,7 @@ import {
 } from 'react-native';
 
 export class AvisoPrivacidad extends React.Component{
-    static navigationOptions = {
-        title : 'Aviso de privacidad',
-    };
+
     render(){
         return(
             <View style = {styles.container}>

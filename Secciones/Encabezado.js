@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {Component} from 'react';
 import {
     StyleSheet,
     Text, 
@@ -8,7 +8,7 @@ import {
     Alert
 } from 'react-native';
 
-export default class Encabezado extends React.Component{
+export default class Encabezado extends Component{
 
         constructor(props){
             super(props);

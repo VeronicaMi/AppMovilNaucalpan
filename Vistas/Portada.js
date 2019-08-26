@@ -5,12 +5,10 @@ import {
 
 import AppIntroSlider from 'react-native-app-intro-slider';
 //npm i react-native-app-intro-slider --save
-import { createAppContainer, createStackNavigator} from 'react-navigation';
+//import { createAppContainer, createStackNavigator} from 'react-navigation';
 // { StackNavigator} from 'react-navigation';
 import { Logo } from '../Secciones/Logo.js';
-import { RegistroUsuario } from './RegistroUsuario.js';
 import { View } from 'react-native-animatable';
-
 
 export default class Portada extends React.Component{
     constructor(props) {
@@ -21,9 +19,6 @@ export default class Portada extends React.Component{
         };
       }
 
-      static navigationOptions = {
-          headerTitle: null,
-      }
       _onDone = () => {
         // After user finished the intro slides. Show real app through
         // navigation or simply by controlling state
@@ -41,7 +36,7 @@ export default class Portada extends React.Component{
             if (this.state.showRealApp) {
             //Real Application
         return(
-        <RegistroUsuario/>
+          <View></View>
       );
     }
     else {

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {Component} from 'react';
 import {
     StyleSheet,
     Text,
@@ -9,12 +9,8 @@ import {
 import Encabezado from '../Secciones/Encabezado.js'
 import OpcionEmergencia from '../Navegacion/OpcionEmergencia.js';
 
-export default class EmergenciaMedica extends React.Component{
-    static  navigationOptions = { 
-        title: 'Emergencia Medica'
-    };
+export default class EmergenciaMedica extends Component{
 
-   
     render(){
         return(
             <View style = {styles.container}>

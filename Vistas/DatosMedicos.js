@@ -9,7 +9,6 @@ import {
     TextInput
 } from 'react-native';
 import Encabezado from '../Secciones/Encabezado.js'
-import OpcionEmergencia from '../Navegacion/OpcionEmergencia.js';
 
 export default class DatosMedicos extends React.Component{
     
